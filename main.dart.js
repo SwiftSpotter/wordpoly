@@ -94597,7 +94597,7 @@ o=this.d
 q=A.b([A.ca(A.b([r,q,A.aP("Your Stats",n,n,A.f4(B.eU,n,s?18:20,B.ca,n,n),n)],p),B.m,B.o,B.p),A.aL(n,o*0.03,n)],p)
 if(s)B.b.E(q,A.b([new A.M9(o,!0,n)],p))
 else{s=o*0.02
-B.b.E(q,A.b([A.ca(A.b([A.cK(new A.iu(o,!1,B.jm,"Wins","win",n),1)],p),B.m,B.o,B.p),A.aL(n,s,n),A.ca(A.b([A.cK(new A.iu(o,!1,B.jr,"Streak","streak",n),1),A.cK(new A.iu(o,!1,B.nC,"Loose","loose",n),1)],p),B.m,B.o,B.p),A.aL(n,s,n),A.ca(A.b([A.cK(new A.iu(o,!1,B.nG,"Words","words_used",n),1),A.cK(new A.iu(o,!1,B.nL,"Plays","plays",n),1)],p),B.m,B.o,B.p)],p))}return A.b4(n,A.c2(q,B.am,B.o,B.p),B.k,n,n,new A.aW(B.nq,n,j,l,k,n,B.w),n,n,n,new A.am(m,m,m,m),n,n,1/0)}}
+B.b.E(q,A.b([A.ca(A.b([A.cK(new A.iu(o,!1,B.jm,"Wins","win",n),1)],p),B.m,B.o,B.p),A.aL(n,s,n),A.ca(A.b([A.cK(new A.iu(o,!1,B.jr,"Streak","streak",n),1),A.cK(new A.iu(o,!1,B.nC,"Losses","loose",n),1)],p),B.m,B.o,B.p),A.aL(n,s,n),A.ca(A.b([A.cK(new A.iu(o,!1,B.nG,"Words","words_used",n),1),A.cK(new A.iu(o,!1,B.nL,"Plays","plays",n),1)],p),B.m,B.o,B.p)],p))}return A.b4(n,A.c2(q,B.am,B.o,B.p),B.k,n,n,new A.aW(B.nq,n,j,l,k,n,B.w),n,n,n,new A.am(m,m,m,m),n,n,1/0)}}
 A.M9.prototype={
 H(a){var s=null,r=this.c,q=this.d,p=t.p
 return A.c2(A.b([A.ca(A.b([A.cK(new A.iu(r,q,B.jm,"Wins","win",s),1)],p),B.m,B.o,B.p),B.ik,A.ca(A.b([A.cK(new A.iu(r,q,B.jr,"Streak","streak",s),1),B.lA,A.cK(new A.iu(r,q,B.nC,"Losses","loose",s),1)],p),B.m,B.o,B.p),B.ik,A.ca(A.b([A.cK(new A.iu(r,q,B.nG,"Words","words_used",s),1),B.lA,A.cK(new A.iu(r,q,B.nL,"Played","plays",s),1)],p),B.m,B.o,B.p)],p),B.m,B.o,B.p)}}
