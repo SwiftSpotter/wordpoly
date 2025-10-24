@@ -3,16 +3,10 @@
 
 <head>
   <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    Fore more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    ✅ GitHub Pages compatible base path
+    Using "./" ensures all files load correctly regardless of where the app is hosted.
   -->
-  <base href="/wordpoly/">
+  <base href="./">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -34,7 +28,7 @@
   <meta name="twitter:description" content="Challenge your vocabulary skills in this exciting word adventure game. Play WordPoly now!">
   <meta name="twitter:image" content="https://iili.io/FTEdDfR.png">
   <meta name="twitter:image:alt" content="WordPoly game preview showing colorful word tiles">
-  
+
   <!-- Canonical URL -->
   <link rel="canonical" href="https://SwiftSpotter.github.io/wordpoly/">
 
@@ -48,7 +42,7 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>WordPoly - Word Adventure Game</title> 
-  <link rel="manifest" href="/wordpoly/manifest.json">
+  <link rel="manifest" href="manifest.json">
   
   <!-- Custom Splash Screen CSS -->
   <style>
@@ -139,44 +133,38 @@
 <body>
   <!-- Custom Splash Screen -->
   <div id="splash-screen">
-    <div id="splash-logo">
-      WP
-    </div>
+    <div id="splash-logo">WP</div>
     <div id="splash-title">WordPoly</div>
     <div id="splash-subtitle">Loading your word adventure...</div>
     <div class="loader"></div>
   </div>
 
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <!-- ✅ Fixed service worker registration -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=3479433783');
+        // Use relative path to avoid GitHub Pages path issues
+        navigator.serviceWorker.register('flutter_service_worker.js?v=' + Date.now());
       });
     }
   </script>
 
-  <!-- Custom Splash Screen JavaScript -->
+  <!-- Remove splash screen when Flutter is ready -->
   <script>
-    // Remove splash screen when Flutter is ready
     window.addEventListener('flutter-first-frame', function() {
       setTimeout(function() {
         const splashScreen = document.getElementById('splash-screen');
         if (splashScreen) {
           splashScreen.classList.add('fade-out');
-          
-          // Remove splash screen completely after fade animation
           setTimeout(function() {
             splashScreen.remove();
           }, 500);
         }
-      }, 500); // Small delay to ensure smooth transition
+      }, 500);
     });
   </script>
   
-  <!-- Load Flutter (your original script) -->
+  <!-- Load Flutter app -->
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
 
